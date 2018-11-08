@@ -27,7 +27,7 @@
 \f1\b\fs28 git commit -m \'93Added description of commit\'94
 \f0\b0\fs24 \
 |-> commit added files to the working repository\
-|-> -m\
+|-> -m does something ***\
 \
 
 \f1\b\fs28 git log
@@ -36,12 +36,16 @@
 |-> orange text = SHA (40 character unique code that identifies the commit)\
 \
 
-\f1\b\fs28 git push
+\f1\b\fs28 git push -u origin master
 \f0\b0\fs24 \
 |-> Push changes to remote directory\
-|->  \
+|-> -u does something ***\
+|-> origin = repository (most likely gonna be origin)\
+|-> master = branch name\
 \
-git pull\
-|-> \
+
+\f1\b\fs28 git pull origin master
+\f0\b0\fs24 \
+|-> same as push but the inverse\
 \
 }
