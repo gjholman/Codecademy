@@ -45,3 +45,7 @@ class LinkedList:
           current_node = None
         else:
           current_node = next_node
+
+
+ll = LinkedList(5)
+ll.stringify_list()
