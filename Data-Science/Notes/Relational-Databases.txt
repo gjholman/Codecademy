@@ -1,0 +1,11 @@
+relational database -> identify data in relation or other data in the database
+rows = records
+colums - each has a specific data type
+
+popular RDBMS:
+
+SQLite - all database in single file, popular in mobile electroniccs (cause you can store it locally)
+MySQL - most popular, web app development, inexpensive, reliable, poor scaling though (owned by Oracle)
+PostgreSQL - open source, web app development, easy to use, slow, less popular
+Oracle DB - Oracle owns is, mostly for banks and businesses
+SQL Server - code is close sourced, microsoft owns it, large enterprise applications
