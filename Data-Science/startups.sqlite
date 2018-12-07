@@ -1,0 +1,35 @@
+SELECT * FROM startups LIMIT 10;
+
+Select COUNT(name) as 'number_of_companies'
+FROM startups;
+
+SELECT SUM(valuation) as 'total_valuation'
+FROM startups;
+
+SELECT SUM(raised) as 'total_raised'
+FROM startups
+WHERE stage = 'Seed';
+
+SELECT name, MIN(founded)
+FROM startups;
+
+SELECT AVG(valuation) as 'average_valuation'
+FROM startups;
+
+SELECT category, ROUND(AVG(valuation), 2) as 'average_valuation'
+FROM startups
+GROUP BY category
+ORDER BY average_valuation DESC
+LIMIT 10;
+
+SELECT category, COUNT(*) as 'total_companies'
+FROM startups
+GROUP BY category
+HAVING total_companies > 3
+ORDER BY 2 DESC;
+
+Select location, AVG(employees) as 'size'
+FROM startups
+GROUP BY location
+HAVING size > 500.0
+ORDER BY 2 DESC;
