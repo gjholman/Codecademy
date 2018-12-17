@@ -1,0 +1,58 @@
+Notes page for NumPy and Statistics review from Codecademy
+
+- Histograms
+	- from matplotlib import pytplot as plt
+	- plt.hist(dataset,
+		   range=(lower,upper)  # ints for bounts on section of data we want to look at
+		   bins=int) 	    	# How many columns / bars there should be
+	- Modal distribution
+		- unimodal (one peak)
+			- Symmetric 	___/\___
+			- Skew Left	_____/\_
+			- Skew Right	_/\_____
+		- bimodal (two peaks)
+		- multimodal (multiple peaks)
+		- uniform distribution
+-Standard Deviation
+	-68% of data fall between +/- 1 standard deviation of the mean
+	-95% - 2 * deviation
+	-99.7% - 3 * deviation
+- Binomial Distribution
+	-np.random.binomial(outOfHowMany, percentChance, size=100000000)
+	-np.mean(binomialDataSet, range)
+		- range can be a comparator, like num==40 or num>1
+
+
+normal and binomial NumPy review
+
+import codecademylib
+import numpy as np
+from matplotlib import pyplot as plt
+
+sunflowers = np.genfromtxt('sunflower_heights.csv',
+                           delimiter=',')
+
+# Calculate mean and std of sunflowers here:
+sunflowers_mean = np.mean(sunflowers)
+sunflowers_std = np.std(sunflowers)
+
+
+# Calculate sunflowers_normal here:
+sunflowers_normal = np.random.normal(sunflowers_mean, sunflowers_std, size=5000)
+
+plt.hist(sunflowers,
+         range=(11, 15), histtype='step', linewidth=2,
+        label='observed', normed=True)
+plt.hist(sunflowers_normal,
+         range=(11, 15), histtype='step', linewidth=2,
+        label='normal', normed=True)
+plt.legend()
+plt.show()
+
+# Calculate probabilities here:
+experiments = np.random.binomial(200, 0.1, size=5000)
+prob = np.mean(experiments < 20)
+
+print(prob)
+
+
