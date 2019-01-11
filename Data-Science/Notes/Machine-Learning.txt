@@ -1,0 +1,19 @@
+Machine Learning Notes
+
+- Founded by IBM's Arthur Samuel
+	- Developed a game that played checkers in 1959
+	- The field of study that gives computers the ability to learn without being explicitly programmed
+- Concept originally thought of by Alan Turning -> can machines think?
+	- From his published Computing Machinery and Intelligence
+
+- Supervised vs. Unsupervised Learning
+	- Supervised learns to predict the output from the input data
+		- Regression
+			- Continuous valued output: Housing Price in New York? Cryptocurrency Value?
+		- Classification
+			- Predict discrete number of values: Is this a picture of a dog? How many dogs? Is this email spam?
+	- Unsupervised Learning learns the inherent structure of a dataset
+
+- Linear Regression
+	- Best fit line
+	- Convergence: when loss stops changing

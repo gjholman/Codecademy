@@ -1,0 +1,76 @@
+Scikit-learn is an open source library in python that provides unsupervised and supervised learning algorithms. It uses NumPy, pandas, and Matplotlib. 
+
+========= Linear Regression ========
+
+from sklearn.linear_model import LinearRegression
+
+#Instantiate a linear model
+your_model = LinearRegression()
+
+#Fit the data to the linear model, your_model
+your_model.fit(x_training_data, y_training_data)
+
+#Find the coef
+your_model.coef_
+
+#Find the intercept
+you_model.intercept_
+
+predictions = your_model.predict(your_x_data)
+predictions.score() # returns the coefficient of determination R^2
+
+=========== Naive Bayes ==============
+
+from sklearn.naibe_bayes import MultinomialNB
+your_model = MultinomialNB()
+
+your_model.fit(x_training_data, y_training_data)
+
+predictions = your_model.predict(input_x_data)
+
+probabilities = your_model.predict_proba(input_x_data)
+
+=========== K-Nearest Neighbors ==========
+
+from sklearn.neighbors import KNeighborsClassifier
+your_model = KNeighborsClassifier()
+
+your_model.fit(x_training_data, y_training_data)
+
+predictions = your_model.predict(input_x_data)
+
+probabilities = your_model.predict_proba(input_x_data)
+
+=========== K-Means ========================
+
+from sklearn.cluster import KMeans
+
+your_model = KMeans(n_clusters=4, init='random')	
+# n_clusters is number of clusters and centroids to generate 
+# init is method for initialization (k-means++ or random) 
+# random_state is the seed used by the random number generator (optional)
+
+your_model.fit(x_training_data)
+predictions = your_model.predict(input_x_data)
+
+============ Validating the model ============
+
+from sklearn.metrics import accuracy_score, recall_score, precision_score, f1_score
+
+print(accuracy_score(true_labels, guesses))
+print(recall_score(true_labels, guesses))
+print(precision_score(true_labels, guesses))
+print(f1_score(true_labels, guesses))
+
+from sklearn.metrics import confusion_matrix
+
+print(confusion_matrix(true_labels, guesses))
+
+============= Training Sets and Test Sets ============
+
+from sklearn.model_selection import train_test_split
+
+x_train, x_test, y_train, y_test = train_test_split(x, y, train_size=0.8, test_size=0.2)
+# Train_size = proportion of the dataset to include in the train split
+# test_size = proportion of the dataset to include in the test split
+# random_state = the seed used by the random number generator (optional)
