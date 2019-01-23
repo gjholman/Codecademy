@@ -17,3 +17,37 @@ Machine Learning Notes
 - Linear Regression
 	- Best fit line
 	- Convergence: when loss stops changing
+- Multiple Linear Regression
+	- using multiple data sets to predict the outcome
+	- to do this we split the data into training and testing sets using sklearn
+	- Then, residual analysis allows us to analyze the model accuracy
+
+- Regression vs Classfication
+	- Regression: Continuous data -> 
+		- Used to predict:
+			- height of plant from rainfall
+			- salary based on age and availability of high-speed internet
+			- car's mpg based on size and model year
+		- Linear regression
+			- y=mx+b
+		- Logistic regression
+			- Probability of 1/0
+		- Polynomial regression
+			- y= m1x^(n) + m2x^(n-1) + m3x^(n-2) + .... + b
+		- Stepwise regression
+			- multiple variables: removes and adds predictors for each step
+			- backward elimination removes least significant variable from each predictor
+		- Ridge Regression
+			- not totally sure
+		- Lasso regression
+			- Least absolute shrinkage selection operator
+	- Classification: discrete label
+		- Used to predict:
+			- Spam email
+			- will it rain?
+			- user is power user or casual user?
+		- multilabel classification
+			- multiple possible outcomes, useful for customer segmentation, item gategorization, sentiment analysis (understanding text)
+		- Naive Bayes
+		- K-nearest neighbors
+		- SVMs
