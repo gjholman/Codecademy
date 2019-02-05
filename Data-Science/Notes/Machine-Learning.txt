@@ -51,3 +51,20 @@ Machine Learning Notes
 		- Naive Bayes
 		- K-nearest neighbors
 		- SVMs
+
+
+
+- Normalizing Data
+	- Split data into typically 80% training and 20% into test
+	- Typically this ends up with a lot of variance, so we look at N-Fold Cross-Validation
+	- Where N times, we make 1/Nth of the data into the validation and the rest to training.
+	- Understanding the accuracy of the model
+
+- K-Nearest-Neighbors
+	- In a 2D example, find the k number of points within. Whichever attribute is most common, that is the correct answer
+	- Steps:
+		- Normalize
+		- find k nearest neighbors
+		- classify new point based on neighbors
+	- Overfitting: rely too heavily on training data. In KNN, not considering enough neighbors
+	- Underfitting: inverse of overfitting, KNN considers too many neighbors
